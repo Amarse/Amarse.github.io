@@ -349,7 +349,7 @@ section.first {
     padding-bottom: 5px;
 }
 .carror {
-    padding-top: 70px;
+    padding-top: 50px;
 }
 .carror .carror-list li {
     float: left;
@@ -371,7 +371,7 @@ section.first {
     padding-bottom: 10px;
 }
 .skill .skill-bar {
-    padding-top: 20px;
+    padding-top: 50px;
 }
 .skill .skill-bar li {
     padding-top: 26px;
@@ -421,13 +421,11 @@ progress::-webkit-progress-value {
 
 .pf-list-info {
     display: flex;
-    padding-left: 30px;
-
     margin: 0 auto;
     width: 100%;
 }
 .pf-list {
-    width: 50%;
+    width: 100%;
     padding-bottom: 100px;
 }
 .pf-list.last {
