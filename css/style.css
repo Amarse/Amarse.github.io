@@ -67,14 +67,14 @@
   /* Size */
   --size-border-radius: 4px;
   /* Animation */
-  --animation-duration: all 300ms ease;
+  --animation-duration: 300ms;
 }
 
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -102,7 +102,7 @@ button {
 
 /* 타이포그래피 */
 h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
@@ -135,17 +135,21 @@ p {
 }
 /* navbar */
 #navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-light-bluePurple);
+  background-color: transparent;
   align-items: center;
+  width: 100%;
+  z-index: 1;
   color: var(--color-white);
-  padding: 16px;
-  height: 70px;
+  padding: 14px;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
-.navbar__logo {
-  justify-items: center;
+#navbar.navbar--dark {
+  background-color: var(--color-light-purple);
+  padding: 8px;
 }
 
 .navbar__logo a {
@@ -154,6 +158,9 @@ p {
 
 .navbar__logo img {
   width: 15%;
+}
+.navbar__title {
+  display: flex;
 }
 .navbar__menu {
   display: flex;
@@ -167,18 +174,26 @@ p {
 
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
-
-.navbar__menu__item:hover {
+.navbar__menu__item.active:hover {
   background-color: var(--color-white);
   color: var(--color-dark-blue);
 }
 
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  right: 28px;
+  font-size: 24px;
+  color: var(--color-white);
+}
 /* Home */
 #home {
   position: relative;
-  background: url("/imgs/background.png") center/cover no-repeat;
+  background: url('/imgs/background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 
@@ -233,7 +248,7 @@ p {
 }
 
 .major__icon i {
-  transition: var(--animation-duration);
+  transition: all var(--animation-duration) ease;
 }
 .major__icon:hover i {
   color: var(--color-purple);
@@ -330,7 +345,11 @@ p {
   flex-basis: 40%;
 }
 .tools {
+  padding: 30px 0;
   background-color: var(--color-dark-bluegray);
+}
+.etc {
+  margin: 30px 0;
 }
 
 /* work */
@@ -427,7 +446,7 @@ p {
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
@@ -459,4 +478,64 @@ p {
   transform: scale(1.1);
   color: var(--color-light-bluePurple);
   transition: var(--animation-duration);
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+    padding-top: 15px;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .navbar__title {
+    display: block;
+    width: 100%;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    padding-bottom: 38px;
+  }
+  .about__jobs {
+    flex-direction: column;
+  }
+  .job__right,
+  .job__left {
+    padding-left: 0;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__toggle-btn {
+    display: block;
+    padding-top: 15px;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .navbar__title {
+    display: block;
+    width: 100%;
+  }
 }
