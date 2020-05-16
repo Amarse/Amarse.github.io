@@ -11,18 +11,18 @@
 
 	<script src="https://kit.fontawesome.com/489a2d7f53.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<!-- nav bar -->
 	<nav id="navbar">
-		<div class="navbar__logo"></div>
-		<img src="/imgs/favicon.png" alt="logo">
-		<a href="#">Hana</a>
+		<div class="navbar__logo">
+			<img src="/imgs/favicon.png" alt="logo">
+		</div>
 		<div class="navbar__title">
 			<ul class="navbar__menu">
-				<li class="navbar__menu__item">Home</li>
+				<li class="navbar__menu__item active">Home</li>
 				<li class="navbar__menu__item">About</li>
 				<li class="navbar__menu__item">Skills</li>
 				<li class="navbar__menu__item">Contact</li>
@@ -30,12 +30,13 @@
 		</div>
 	</nav>
 	<section id="home">
-		<h1 class="home__title">Hello, </br>I'm hana.</h1>
+		<img src="/imgs/profile2.png" alt="hana's profile photo" class="home__avatar">
+		<h1 class="home__title">Hello, I'm hana.</h1>
 		<h2 class="home__description">From Game Designer to Front-and-Developer</h2>
-		<button class="home__contact">contact</button>
+		<button class="home__contact">Contact Me</button>
 	</section>
 	<!-- about -->
-	<section id="about">
+	<section id="about" class="section section__container">
 		<h1>About Me</h1>
 		<p>UI 디자인 작업을 들어가기 전 수만가지 업무 중 가장 먼저 해야하고 중요한 업무인 함께 UI를 담당하는 개발자분들과의 소통으로 시작 됩니다.
 			자연스러운 소통으로 인해 내가 직접 개발을 해봤으면 좋겠다 라는 생각에 관심을 가지던 중 Front-end 직군을 알게 되었고, 전 과감히 도전을 하게 되었습니다.
@@ -43,51 +44,92 @@
 			수많은 우려 속에 저는 천천히 해내어 가고 있습니다.
 			게임 업계의 치열한 경험과 유연한 사고로 즐겁게 일하고 싶습니다.</p>
 		<div class="about__majors">
-			<div class="major__icon">
-				<i class="fas fa-laptop-code"></i></div>
-			<div class="major__title">HTML/CSS</div>
-			<div class="major__description">웹표준 마크업, HTML5, SCSS</div>
-			<div class="major__icon">
-				<i class="far fa-file-code"></i>
+			<div class="major">
+				<div class="major__icon">
+					<i class="fas fa-laptop-code"></i></div>
+				<h2 class="major__title">HTML/CSS</h2>
+				<div class="major__description">웹표준 마크업, HTML5, SCSS</div>
 			</div>
-			<div class="major__title">scripting language</div>
-			<div class="major__description">javascript, typescript</div>
-			<div class="major__icon">
-				<i class="fab fa-react"></i>
+			<div class="major">
+				<div class="major__icon">
+					<i class="far fa-file-code"></i>
+				</div>
+				<h2 class="major__title">scripting language</h2>
+				<div class="major__description">javascript, typescript</div>
 			</div>
-			<div class="major__title">React</div>
-			<div class="major__description">redux, saga</div>
+			<div class="major">
+				<div class="major__icon">
+					<i class="fab fa-react"></i>
+				</div>
+				<h2 class="major__title">React</h2>
+				<div class="major__description">redux, saga</div>
+			</div>
 		</div>
 		<div class="about__jobs">
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
+			<div class="job__left">
+				<div class="job">
+					<div class="job__icon">
+						<i class="fas fa-adjust"></i>
+					</div>
+					<div class="job__description">
+						<p class="job__name">(주)오거-UI 디자이너</p>
+						<p class="job__period">- 2019.06~ 2019.11</br>- 게임 로비 디자인</br>
+							- 인게임 UI 제작</br>
+							- 아이콘 제작 및 아웃게임( 컨텐츠 및 시스템팝업) 제작</p>
+					</div>
+				</div>
+				<div class="job">
+					<div class="job__icon">
+						<i class="fas fa-adjust"></i>
+					</div>
+					<div class="job__description">
+						<p class="job__name">뉴럴비씨-UI디자이너</p>
+						<p class="job__period">- 2018.11~ 2019.05</br>- 아이콘 제작 및 아웃게임( 컨텐츠 및 시스템팝업) 제작</p>
+					</div>
+				</div>
+				<div class="job">
+					<div class="job__icon">
+						<i class="fas fa-adjust"></i>
+					</div>
+					<div class="job__description">
+						<p class="job__name">밥게임즈-UI디자이너</p>
+						<p class="job__period">- 2018.06~ 2018.11</br>- 인게임 배너 작업. (로비 게임 배너 및 상점 상단 배너)</br>
+							- 페이스북 게시물 작업.</p>
+					</div>
+				</div>
 			</div>
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
+			<div class="job__right">
+				<div class="job">
+					<div class="job__icon">
+						<i class="fas fa-adjust"></i>
+					</div>
+					<div class="job__description">
+						<p class="job__name">빅맨게임즈-QA/UI디자이너</p>
+						<p class="job__period">- 2017.03~ 2018.05</br>- 인도네시아,미얀마 개발 QA 체크리스트 작성 및 테스트 업무 진행.</br>
+							- 라이브 모니터링 및 라이브 대응.</br>
+							- KPI 리포트 작성</br>
+							- 인게임 배너 작업. (로비 게임 배너 및 상점 상단 배너)
+						</p>
+					</div>
+				</div>
+				<div class="job">
+					<div class="job__icon">
+						<i class="fas fa-adjust"></i>
+					</div>
+					<div class="job__description">
+						<p class="job__name">크레노바</p>
+						<p class="job__period">- 2015.12~ 2017.03</br>- 게임 개발 QA 체크리스트 작성 및 테스트 업무를 진행.</br>
+							- 라이브 모니터링 진행.
+						</p>
+					</div>
+				</div>
 			</div>
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
-			</div>
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
-			</div>
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
-			</div>
-			<div class="job">
-				<p class="job__name"></p>
-				<p class="job__period"></p>
-			</div>
+		</div>
 		</div>
 	</section>
 	<!-- //about -->
 	<!-- skills -->
-	<section id="skills">
+	<section id="skills" class="section section__container">
 		<h1>Skills</h1>
 		<h2>Skills & Attribute</h2>
 		<p>새로운 것을 배우는데에 있어서 거부감이 없습니다. UI디자이너로 일한 경험으로 커뮤니케이션에 능하며, 계획을 세워 일을 하는 것을 좋아합니다.
@@ -95,49 +137,40 @@
 		<div class="skillset">
 			<div class="skillset__left">
 				<h3 class="skillset__title">Skills</h3>
-				<div class="skiil">
+				<div class="skill">
 					<div class="skill__description">
-						<span>HTML</span>
-						<span>70%</span>
+						<span>html</span>
+						<span>80%</span>
 					</div>
 					<div class="skill__bar">
-						<div class="skill__value"></div>
+						<div class="skill__value" style="width: 80%"></div>
 					</div>
 				</div>
-				<div class="skiil">
-					<div class="skill__description">
-						<span>HTML</span>
-						<span>70%</span>
-					</div>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-				</div>
-				<div class="skiil">
+				<div class="skill">
 					<div class="skill__description">
 						<span>css/scss</span>
-						<span>70%</span>
+						<span>75%</span>
 					</div>
 					<div class="skill__bar">
-						<div class="skill__value"></div>
+						<div class="skill__value" style="width: 75%"></div>
 					</div>
 				</div>
-				<div class="skiil">
+				<div class="skill">
 					<div class="skill__description">
 						<span>javascript/typescript</span>
 						<span>60%</span>
 					</div>
 					<div class="skill__bar">
-						<div class="skill__value"></div>
+						<div class="skill__value" style="width: 60%"></div>
 					</div>
 				</div>
-				<div class="skiil">
+				<div class="skill">
 					<div class="skill__description">
 						<span>react</span>
-						<span>70%</span>
+						<span>60%</span>
 					</div>
 					<div class="skill__bar">
-						<div class="skill__value"></div>
+						<div class="skill__value" style="width: 60%"></div>
 					</div>
 				</div>
 			</div>
@@ -152,63 +185,72 @@
 				<div class="etc">
 					<h3 class="skillset__title">Etc</h3>
 					<ul class="etc__"></ul>
-					<list><span>Git</span></list>
-					<list><span>Git오픈소스 활용</span></list>
+					<li><span>Git</span></li>
+					<li><span>Git오픈소스 활용</span></li>
 
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- work -->
-	<section id="work">
-		<h3>My work</h3>
-		<h3>Projects</h3>
-		<div class="work__categories">
-			<button class="category__btn">All <span class="category">5</span></button>
-			<button class="category__btn">Web <span class="category">3</span></button>
-			<button class="category__btn">Reac <span class="category">2</span></button>
-		</div>
+	<section id="work" class="section">
+		<div class="section__container">
+			<h3>My work</h3>
+			<h3>Projects</h3>
+			<div class="work__categories">
+				<button class="category__btn active">All <span class="category__count">5</span></button>
+				<button class="category__btn">Web <span class="category__count">3</span></button>
+				<button class="category__btn">React <span class="category__count">2</span></button>
+			</div>
 
-		<div class="works__projects">
-			<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio1.png"
-					alt="반응형 웹사이트">
-				<div class="project__description">
-					<h3>반응형 웹사이트(일반)</h3>
-					<span>Clone coding with HTML, CSS, Javascript</span>
-				</div>
-			</a>
-			<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio1.png"
-					alt="반응형 웹사이트">
-				<div class="project__description">
-					<h3>반응형 웹사이트(일반)</h3>
-					<span>Clone coding with HTML, CSS, Javascript</span>
-				</div>
-			</a>
-			<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio1.png"
-					alt="반응형 웹사이트">
-				<div class="project__description">
-					<h3>반응형 웹사이트(일반)</h3>
-					<span>Clone coding with HTML, CSS, Javascript</span>
-				</div>
-			</a>
-			<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio1.png"
-					alt="반응형 웹사이트">
-				<div class="project__description">
-					<h3>반응형 웹사이트(일반)</h3>
-					<span>Clone coding with HTML, CSS, Javascript</span>
-				</div>
-			</a>
-			<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio1.png"
-					alt="반응형 웹사이트">
-				<div class="project__description">
-					<h3>반응형 웹사이트(일반)</h3>
-					<span>Clone coding with HTML, CSS, Javascript</span>
-				</div>
-			</a>
+			<div class="works__projects">
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+				<a href="https://github.com/Amarse/Responsive" class="project" target="blank"><img src="imgs/portfolio.png"
+						alt="반응형 웹사이트" class="project__img" />
+					<div class="project__description">
+						<h3>반응형 웹사이트(일반)</h3>
+						<span>Clone coding with HTML, CSS, Javascript</span>
+					</div>
+				</a>
+			</div>
 		</div>
 	</section>
 	<!-- contact -->
-	<section id="contact">
+	<section id="contact" class="section">
 		<h1 class="contact__title">Let's talk</h1>
 		<h2 class="contact__email">byicy12@gmail.com</h2>
 		<div class="contact__links">
