@@ -359,7 +359,7 @@ p {
 }
 
 .work__categories {
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 .category__btn {
   border: 1px solid var(--color-dark-white);
@@ -394,7 +394,6 @@ p {
   width: 22px;
   height: 22px;
   opacity: 0;
-  transition: var(--animation-duration);
 }
 
 .works__projects {
@@ -402,8 +401,13 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
-
+.works__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
 .project {
   display: flex;
   position: relative;
@@ -413,6 +417,10 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project:hover .project__description {
