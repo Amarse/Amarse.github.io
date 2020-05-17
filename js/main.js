@@ -24,7 +24,39 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   // console.log(event.target.dataset.link);
-
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  scrollIntoView(link);
 });
+
+// contact 버튼을 무르면 contact으로 이동
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+//스크롤 내리면 홈이 연해지게 하기
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  // console.log(1 - window.scrollY / homeHeight);
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//스크롤 하면 에로우업 버튼 사라졌다 나타나기
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// 에로우 업 누르면 홈으로 이동하기
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}

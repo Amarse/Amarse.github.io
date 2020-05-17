@@ -74,7 +74,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -102,7 +102,7 @@ button {
 
 /* 타이포그래피 */
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
@@ -191,7 +191,7 @@ p {
 /* Home */
 #home {
   position: relative;
-  background: url('/imgs/background.png') center/cover no-repeat;
+  background: url("/imgs/background.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 100px;
   text-align: center;
@@ -446,7 +446,7 @@ p {
 }
 
 .project__description h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -478,6 +478,27 @@ p {
   transform: scale(1.1);
   color: var(--color-light-bluePurple);
   transition: var(--animation-duration);
+}
+
+/* scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background-color: var(--color-light-purple);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* 미디어 쿼리 */
