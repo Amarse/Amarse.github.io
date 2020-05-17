@@ -27,6 +27,12 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
+//네비바 토글
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
+
 // contact 버튼을 무르면 contact으로 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
@@ -71,6 +77,13 @@ workMenuBtn.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
+
+  //새로클릭 된 메뉴에 효과 주기
+  const active = document.querySelector('.category__btn.selected');
+  if (active != null) {
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
 
   // 3초 있다 필터링 노출하기
   projectMenuBtn.classList.add('anim-out');
