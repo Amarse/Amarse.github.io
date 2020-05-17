@@ -196,8 +196,8 @@ p {
 }
 
 .home__avatar {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
 .home__title,
@@ -528,6 +528,7 @@ p {
 
     --font-micro: 12px;
   }
+
   .navbar__toggle-btn {
     display: block;
     padding-top: 20px;
@@ -560,6 +561,11 @@ p {
   .navbar__title {
     display: block;
     width: 100%;
+  }
+
+  .home__avatar {
+    width: 400px;
+    height: 400px;
   }
   .about__majors {
     flex-direction: column;
