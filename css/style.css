@@ -189,7 +189,7 @@ p {
 /* Home */
 #home {
   position: relative;
-  background: url("/imgs/background.png") center/cover no-repeat;
+  background: url("/imgs/back.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 100px;
   text-align: center;
