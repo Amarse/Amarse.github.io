@@ -34,7 +34,7 @@ navbarToggleBtn.addEventListener('click', () => {
    
 });
 
-// contact 버튼을 무르면 contact으로 이동
+// contact 버튼을 르면 contact으로 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
