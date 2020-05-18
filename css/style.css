@@ -182,6 +182,7 @@ p {
 .navbar__toggle-btn {
   display: none;
   position: absolute;
+  top: 18px;
   right: 18px;
   font-size: 24px;
   color: var(--color-white);
@@ -534,11 +535,7 @@ p {
     padding: 16px;
     padding-top: 70px;
   }
-  .navbar__toggle-btn {
-    display: block;
-    padding-top: 20px;
-    font-size: var(--font-medium);
-  }
+  
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -547,6 +544,9 @@ p {
   }
   #navbar.navbar--dark {
     padding: 4px 16px;
+  }
+  .navbar__toggle-btn {
+    display: block;
   }
 
   .navbar__menu {
@@ -599,7 +599,7 @@ p {
     height: 50px;
     font-size: 30px;
     line-height: 50px;
-    right: 28px;
+    right: 16px;
     bottom: 16px;
   }
 }
