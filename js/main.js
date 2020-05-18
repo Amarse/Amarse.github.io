@@ -30,7 +30,8 @@ navbarMenu.addEventListener('click', (event) => {
 //네비바 토글
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
-  navbarMenu.classList.toggle('open');
+   navbarMenu.classList.toggle('open');
+   
 });
 
 // contact 버튼을 무르면 contact으로 이동

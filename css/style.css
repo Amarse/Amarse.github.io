@@ -539,11 +539,11 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 4px 16px;
+    padding: 2px 16px;
     background-color: var(--color-light-purple);
   }
   #navbar.navbar--dark {
-    padding: 4px 16px;
+    padding:  2px 16px;
   }
   .navbar__toggle-btn {
     display: block;
@@ -558,14 +558,14 @@ p {
   .navbar__menu.open {
     display: block;
   }
+  .navbar__title {
+    display: block;
+    width: 100%;
+  }
 
   .section {
     padding: 16px;
     padding-top: 70px;
-  }
-  .navbar__title {
-    display: block;
-    width: 100%;
   }
 
   .about__majors {
