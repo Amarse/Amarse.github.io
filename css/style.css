@@ -74,7 +74,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -102,7 +102,7 @@ button {
 
 /* 타이포그래피 */
 h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
@@ -190,7 +190,7 @@ p {
 /* Home */
 #home {
   position: relative;
-  background: url("/imgs/back.png") center/cover no-repeat;
+  background: url('/imgs/back.png') center/cover no-repeat;
   padding: 40px;
   padding-top: 100px;
   text-align: center;
@@ -281,7 +281,7 @@ p {
 .job__left {
   display: flex;
   justify-content: space-around;
-    width: 100%;
+  width: 100%;
 }
 .job__right {
   padding-left: 200px;
@@ -463,7 +463,7 @@ p {
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
@@ -535,7 +535,7 @@ p {
     padding: 16px;
     padding-top: 70px;
   }
-  
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -543,7 +543,7 @@ p {
     background-color: var(--color-light-purple);
   }
   #navbar.navbar--dark {
-    padding:  2px 16px;
+    padding: 2px 16px;
   }
   .navbar__toggle-btn {
     display: block;
